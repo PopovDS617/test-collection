@@ -14,9 +14,11 @@ func TestDiv(t *testing.T) {
 		a := 10
 		b := 5
 
+		expected := 2
+
 		result := Div(a, b)
 
-		assert.Equal(t, 2, result)
+		assert.Equal(t, expected, result)
 
 	})
 	t.Run("10/0", func(t *testing.T) {
@@ -24,7 +26,11 @@ func TestDiv(t *testing.T) {
 		a := 10
 		b := 5
 
-		require.Equal(t, a/b, Div(a, b))
+		expected := 2
+
+		result := Div(a, b)
+
+		require.Equal(t, expected, result)
 
 	})
 
